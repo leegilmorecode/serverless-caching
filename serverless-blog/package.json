@@ -1,0 +1,42 @@
+{
+  "name": "serverless-blog",
+  "version": "0.1.0",
+  "bin": {
+    "serverless-blog": "bin/serverless-blog.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy": "cdk deploy --outputs-file ./cdk-outputs.json",
+    "remove": "cdk destroy"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-appsync": "^1.125.0",
+    "@aws-cdk/aws-dax": "^1.125.0",
+    "@aws-cdk/aws-dynamodb": "^1.125.0",
+    "@aws-cdk/aws-lambda": "^1.125.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.125.0",
+    "@aws-cdk/core": "^1.125.0",
+    "@aws-cdk/custom-resources": "^1.125.0",
+    "@types/amazon-dax-client": "^1.2.2",
+    "@types/aws-lambda": "^8.10.89",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "@types/uuid": "^8.3.4",
+    "aws-cdk": "2.1.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "amazon-dax-client": "^1.2.7",
+    "aws-cdk-lib": "2.1.0",
+    "aws-sdk": "^2.1053.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16",
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "info": {
+    "_postman_id": "a13c52a8-0feb-4e13-83f5-6f299497bba6",
+    "name": "serverless-caching-aws-blogs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Blogs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{api}}/prod/blogs",
+          "protocol": "https",
+          "host": ["{{api}}"],
+          "path": ["prod", "blogs"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Blogs (In memory Lambda cache)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{api}}/prod/blogs-cached-in-memory",
+          "protocol": "https",
+          "host": ["{{api}}"],
+          "path": ["prod", "blogs-cached-in-memory"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Logos (In memory Lambda tmp cache)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{api}}/prod/logos-cached-in-tmp",
+          "protocol": "https",
+          "host": ["{{api}}"],
+          "path": ["prod", "logos-cached-in-tmp"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Blog by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{api}}/prod/blogs/1",
+          "protocol": "https",
+          "host": ["{{api}}"],
+          "path": ["prod", "blogs", "1"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "api",
+      "value": "your-api.execute-api.eu-west-1.amazonaws.com"
+    }
+  ]
+}

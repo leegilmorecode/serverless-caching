@@ -1,0 +1,21 @@
+input blogInput {
+  id: ID!
+  blogTitle: String!
+  blogBody: String!
+  blogDate: AWSDateTime!
+}
+
+type blog {
+  id: ID!
+  blogTitle: String!
+  blogBody: String!
+  blogDate: AWSDateTime!
+}
+type Query {
+  getBlog(id: ID!): blog!
+  getBlogNoDax(id: ID!): blog!
+  listBlogs: [blog]
+}
+type Mutation {
+  updateBlog(input: blogInput!): blog!
+}
